@@ -1298,7 +1298,7 @@ q{
 
 	my $dir = int(rand(2));
 	my $x;
-	my $speed = 0.7;
+	my $speed = 1;
 	if($dir) {
 		$x = $anim->width()-1;
 		$speed *= -1;
@@ -1389,7 +1389,7 @@ q{
 
 	my $dir = int(rand(2));
 	my $x;
-	my $speed = 2.5;
+	my $speed = 1;
 	if($dir) {
 		$x = $anim->width()-1;
 		$speed *= -1;
