@@ -99,7 +99,7 @@ sub main {
 	my $anim = Term::Animation->new();
 
 	# set the wait time for getch
-	halfdelay(1);
+	halfdelay(1.5);
 	#nodelay(1);
 
 	$anim->color(1);
@@ -156,7 +156,7 @@ sub add_environment {
 			name		=> "water_seg_$i",
 			type		=> "waterline",
 			shape		=> $water_line_segment[$i],
-			position	=> [ 0, $i+5, $depth{'water_line'  . $i} ],
+			position	=> [ 0, $i+1, $depth{'water_line'  . $i} ],
 			default_color	=> 'cyan',
 			depth		=> 22,
 			physical	=> 1,
@@ -1298,7 +1298,7 @@ q{
 
 	my $dir = int(rand(2));
 	my $x;
-	my $speed = 3;
+	my $speed = 0.7;
 	if($dir) {
 		$x = $anim->width()-1;
 		$speed *= -1;
@@ -1415,11 +1415,11 @@ q{
 sub init_random_objects {
 	#return ( \&add_shark );
 	return (
-		\&add_ship,
-		\&add_whale,
-		\&add_monster,
+		#\&add_ship,
+		#\&add_whale,
+		#\&add_monster,
 		\&add_big_fish,
-		\&add_shark,
+		#\&add_shark,
 	);
 }
 
